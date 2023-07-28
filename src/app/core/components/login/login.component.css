@@ -1,0 +1,17 @@
+.card-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.h4_register {
+    color     : #06447c;
+    text-align: inherit;
+    font-size : 133%;
+  }
+  
+  .register {
+    margin-top     : 6%;
+    display        : flex;
+    justify-content: center;
+  }

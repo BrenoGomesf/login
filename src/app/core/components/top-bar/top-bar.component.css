@@ -1,0 +1,29 @@
+.top {
+    background: rgb(255, 255, 255, 0.09);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(17.9px);
+    -webkit-backdrop-filter: blur(17.9px);
+    border-bottom: 1px solid rgba(110, 110, 110, 0.5);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 55;
+    padding: 0.3rem 0.8rem;
+    display: flex;
+}
+
+.top img {
+    margin: auto 0;
+}
+
+.top .centered-name {
+    margin: 0 auto;
+    font-size: 11pt;
+    line-height: 20pt;
+}
+
+.float-center {
+    position: absolute;
+    width: 100%;
+}

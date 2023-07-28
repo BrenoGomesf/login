@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-center mt-1 " >{{title}}</h5>
+                <form [formGroup]="form">
+                    <div *ngIf="!send_email">
+                        <div class="form-group mt-4">
+                            <p class="text">E-mail:</p>
+                            <input class="form-control form-control-lg" type="text" formControlName="email" placeholder="Informe seu email">
+                            <app-input-error-msg [control]="form.get('email')"
+                            [for]="'email'" label="E-mail"></app-input-error-msg>
+                        </div>
+                        <div class="form-group mt-2" *ngIf="input_password">
+                            <p class="text">Senha:</p>
+                            <input class="form-control form-control-lg" type="password"  formControlName="password" placeholder="Informe sua senha">
+                            <app-input-error-msg [control]="form.get('password')"
+                            [for]="'password'" label="Senha"></app-input-error-msg>
+                        </div>
+                        <p class="text-center text-danger mt-3 mb-1">{{message}}</p>
+                        <div class="row">
+                            <div *ngIf="input_password">
+                                <div class="col-12">
+                                    <div class="mt-4  w-100" *ngIf="viewButton">
+                                        <div class="col-12">
+                                            <button  class="btn btn-primary w-100 fs-4 d-block" (click)="validForm()"
+                                                style="border-radius: 10px;">Entrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mt-4  w-100" *ngIf="recover_password">
+                                    <div class="col-12">
+                                        <button  class="btn btn-primary w-100 fs-4 d-block" (click)="sendPasswordReset()"
+                                            style="border-radius: 10px;">Recuperar senha</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 register mt-4" *ngIf="!recover_password">
+                                <p style="color: #525659;">Esqueceu a senha? </p>
+                                <p  style="cursor: pointer; color: #06447c;" class="fw-bold ms-1" (click)="confirmResetPassword()"> Recuperar aqui</p>
+                              </div>
+                        </div>
+                    </div>
+
+
+                </form>
+                <div *ngIf="send_email" class="margin-top: 23px;">
+                    <div class="mt3 d-flex justify-content-center">
+                    <img src="https://www.clubemultinivel.com.br/escritorio/img/sucesso.png" jsaction="VQAsE" class="r48jcc pT0Scc iPVvYb" style="    max-width: 168px;
+                    height: 148px;
+                    margin: 0px;
+                    width: 250;" alt="ClubeMultinivel - Escritório Virtual" jsname="kn3ccd" aria-hidden="false">
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-center text-success mt-3 mb-1">Verifique sua caixa de E-mail.</p>
+                        <p class="text-center text-black mb-1">E-mai:{{form.controls['email'].value}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

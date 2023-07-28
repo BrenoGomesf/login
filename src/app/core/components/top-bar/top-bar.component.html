@@ -1,0 +1,10 @@
+<div class="top text-white">
+    <img src="/assets/images/cloud-regular-24-white.png" alt="" height="20">
+    <a href="https://anexosolucoes.com.br/" target="_blank" class="mb-0 centered-name text-white text-decoration-none text-center float-center">Anexo Soluções</a>
+    <div class="d-flex align-items-center m-auto me-0" style="z-index: 56;">
+      <p class="mb-0 mx-3 fs-xs">{{ currentDateTime }}</p>
+      <button class="btn p-0 m-0" (click)="toggleFullScreen()">
+        <i class='bx bx-collapse-alt text-white' [ngClass]="fullscreen == true ? '' : 'bx-expand-alt'"></i>
+      </button>
+    </div>
+  </div>
